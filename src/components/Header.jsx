@@ -1,41 +1,51 @@
 import React from 'react'
-import { AppBar, Box, Toolbar, Typography, Select, MenuItem, Container } from '@mui/material'
+import { AppBar, 
+  Toolbar, 
+  Typography, 
+  Select, 
+  MenuItem, 
+  Container, 
+  Link, 
+  Box} 
+  from '@mui/material'
 import { CryptoSate } from '../CryptoContext'
+import { NavLink } from 'react-router-dom'
 
 
 
 const Header = () => {
 
-  const {currency,setCurrency}=CryptoSate()
+  const { currency, setCurrency } = CryptoSate()
 
-  console.log(currency,setCurrency);
+  console.log(currency, setCurrency);
 
   return (
-      <AppBar position="static" sx={{bgcolor:"#0b0b14"}}>
-      <Container sx={{bgcolor:'transparent'}} >
+    <Box position="static" sx={{ bgcolor: "#1d1d2b", py:0.5 }}>
+      <Container sx={{ bgcolor: 'transparent' }} >
         <Toolbar  >
-        {/* <Link to="/"> */}
-          <Typography variant="h5" component="div" sx={{ flexGrow:1,fontWeight:900, color:"gold"}}>
-            Crypto Trackr
+          <div style={{width:"100%"}}>
+            <Typography variant="h5" component="div" sx={{  fontWeight: 900}}>
+            <NavLink to="/" style={{textDecoration:"none",color:'#fcc200' }} >
+              Crypto Trackr
+              </NavLink>
             </Typography>
-            {/* </Link> */}
-         
+          </div>
 
           <Select
             style={{
-              width:100,
-              height:40,
-              marginLeft:15
+              width: 100,
+              height: 40,
+              marginLeft: 15
             }}
             value={currency}
-            onChange={(e)=> setCurrency(e.target.value)}
+            onChange={(e) => setCurrency(e.target.value)}
           >
             <MenuItem value={"USD"}>USD</MenuItem>
             <MenuItem value={"INR"}>INR</MenuItem>
           </Select>
         </Toolbar>
-        </Container>
-      </AppBar>
+      </Container>
+    </Box>
 
   )
 }
