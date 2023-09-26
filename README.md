@@ -1,4 +1,4 @@
-# Crypto Pallete
+# Crypto Trackr
 
 ## A App that shows the price of cryptocurriences and thier details
 
