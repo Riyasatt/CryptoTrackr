@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import React, { useState,useEffect } from 'react'
 import {TrendingCoins} from "../../config/api"
-import { CryptoSate } from '../../CryptoContext'
+import { CryptoState } from '../../CryptoContext'
 import axios from 'axios'
 import AliceCarousel from 'react-alice-carousel'
 import { Link } from 'react-router-dom'
@@ -12,7 +12,7 @@ export function numberWithCommas (x) {
 }
 
 const Caraousel = () => {
-     const {currency,symbol}=CryptoSate()
+     const {currency,symbol}=CryptoState()
 
      const [trending, setTrending] = useState([])
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CryptoSate } from '../CryptoContext'
+import { CryptoState } from '../CryptoContext'
 import axios from 'axios'
 import { CoinList } from '../config/api'
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Pagination, Stack, TextField, LinearProgress } from '@mui/material'
@@ -13,7 +13,7 @@ const CoinsTable = () => {
      const [loading, setLoading] = useState(false)
      const [page, setPage] = useState(1)
 
-     const { currency, symbol } = CryptoSate()
+     const { currency, symbol } = CryptoState()
 
      const fetchCoinTable = async () => {
           setLoading(true)
@@ -21,8 +21,6 @@ const CoinsTable = () => {
           setcoinTable(data)
           setLoading(false)
      }
-
-     console.log(coinTable);
 
      useEffect(() => {
           fetchCoinTable()

@@ -8,14 +8,14 @@ import { AppBar,
   Link, 
   Box} 
   from '@mui/material'
-import { CryptoSate } from '../CryptoContext'
+import { CryptoState } from '../CryptoContext'
 import { NavLink } from 'react-router-dom'
 
 
 
 const Header = () => {
 
-  const { currency, setCurrency } = CryptoSate()
+  const { currency, setCurrency } = CryptoState()
 
   console.log(currency, setCurrency);
 
