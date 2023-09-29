@@ -41,7 +41,12 @@ const CoinChart = () => {
      useEffect(() => {
        fetchChart()
        // eslint-disable-next-line
-     }, [days,currency])
+     }, [days])
+     useEffect(() => {
+      fetchChart()
+      // eslint-disable-next-line
+    }, [currency])
+
 
 
      Chart.register(CategoryScale)
