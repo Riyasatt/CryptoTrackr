@@ -5,6 +5,7 @@
      padding: 0;
      box-sizing: border-box;
      text-decoration: none ;
+     scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -12,6 +13,6 @@
 }
 
 body{
-     background-color: rgba(6, 6, 24, 0.955);
+     /* background-color: rgba(6, 6, 24, 0.955); */
      color: white;
 }

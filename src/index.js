@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from"./App";
 import "./index.css";
-import CoinPage from"./components/CoinPage"
-import HomePage from"./components/HomePage"
+import CoinPage from"./components/CoinPage/CoinPage"
+import HomePage from"./components/HomePage/HomePage"
 import { RouterProvider,
       createBrowserRouter,
        createRoutesFromElements,

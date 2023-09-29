@@ -1,16 +1,42 @@
 import React from 'react'
-import { AppBar, 
-  Toolbar, 
-  Typography, 
-  Select, 
-  MenuItem, 
-  Container, 
-  Link, 
-  Box} 
+import {
+  Toolbar,
+  Typography,
+  Select,
+  MenuItem,
+  Container,
+  Box,
+  Link
+}
   from '@mui/material'
 import { CryptoState } from '../CryptoContext'
 import { NavLink } from 'react-router-dom'
+import styled from '@emotion/styled'
 
+
+const CustomSelect = styled(Select)(({ theme }) => ({
+  height: 40,
+  // color: theme.palette.main.primary,
+  '& label.Mui-focused': {
+       color: theme.palette.main.primary,
+  },
+  '& .MuiInput-underline:after': {
+       borderBottomColor: theme.palette.main.primary,
+  },
+  '& .MuiOutlinedInput-root': {
+       '& fieldset': {
+            borderColor: theme.palette.main.primary,
+       },
+       '&:hover fieldset': {
+            borderColor: theme.palette.main.primary,
+       },
+       '&.Mui-focused fieldset': {
+            borderColor: theme.palette.main.primary,
+       }
+  }
+
+
+}))
 
 
 const Header = () => {
@@ -20,29 +46,26 @@ const Header = () => {
   console.log(currency, setCurrency);
 
   return (
-    <Box position="static" sx={{ bgcolor: "#1d1d2b", py:0.5 }}>
-      <Container sx={{ bgcolor: 'transparent' }} >
+    <Box position="static" sx={{ bgcolor: "background.secondary", py: 0.5 }}>
+      <Container >
         <Toolbar  >
-          <div style={{width:"100%"}}>
-            <Typography variant="h5" component="div" sx={{  fontWeight: 900}}>
-            <NavLink to="/" style={{textDecoration:"none",color:'#fcc200' }} >
-              Crypto Trackr
-              </NavLink>
+          <div style={{ width: "100%" }}>
+            <Typography variant="h5" component="div" sx={{ fontWeight: 900 }}>
+              <Link to="/" component={NavLink} color='inherit' sx={{ textDecoration: "none", color:"main.primary" }} >
+                Crypto Trackr
+              </Link>
             </Typography>
           </div>
 
-          <Select
-            style={{
-              width: 100,
-              height: 40,
-              marginLeft: 15
-            }}
+          <CustomSelect
+          sx={{color:"main.primary"}}
+          variant="outlined"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
           >
             <MenuItem value={"USD"}>USD</MenuItem>
             <MenuItem value={"INR"}>INR</MenuItem>
-          </Select>
+          </CustomSelect>
         </Toolbar>
       </Container>
     </Box>

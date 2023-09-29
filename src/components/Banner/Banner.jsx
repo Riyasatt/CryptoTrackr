@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Caraousel from './Caraousel'
 
@@ -15,7 +15,7 @@ const Banner = () => {
      }}>
           <div>
                <Typography variant='h2' sx={{fontWeight:900, mb:1}}>
-                    Crypto <span style={{color:'gold'}}>Trackr</span>
+                    Crypto <Box component="span" sx={{color:"main.primary"}}>Trackr</Box>
                </Typography>
                <Typography variant='subtitle1' sx={{fontWeight:100}}>
                     Get All The Info Regarding Your Favorite Crypto Currency

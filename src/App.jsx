@@ -11,8 +11,15 @@ const App = () => {
      const customTheme = createTheme({
           palette: {
                mode: "dark",
-               primary: {
-                    main: "#fcc200"
+               primary:{
+                    main:"#fcc200"
+               },
+               main:{
+                    primary: "#fcc200"
+               },
+               background:{
+                    primary: "rgba(6, 6, 24, 0.955)",
+                    secondary:"#1d1d2b"
                }
           },
           typography: {

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <Box sx={{py:3, bgcolor:"#1d1d2b"}}>
+    <Box sx={{py:3, bgcolor:"background.secondary"}}>
       <Container>
         <Box >
         <Typography sx={{color:"#fcc200"}}>Made with 	&#x1F493; by Riyasat</Typography>
