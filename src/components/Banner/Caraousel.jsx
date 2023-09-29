@@ -24,6 +24,7 @@ const Caraousel = () => {
 
      useEffect(() => {
        fetchTrendingCoins();
+       // eslint-disable-next-line
      }, [currency])
      
      const responsive={
